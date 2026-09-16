@@ -1,0 +1,11 @@
+TODO:
+- [ ] hello world
+- [ ] populate server with test channels and messages (for testing)
+- [ ] remove all messages
+- [ ] remove all channels
+- [ ] change all messages to a specific text
+- [ ] spam images from a folder
+- [ ] export all messages from server
+- [ ] mass assign role
+- [ ] remove all roles
+- [ ] create useless channels
