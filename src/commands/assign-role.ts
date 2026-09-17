@@ -60,15 +60,15 @@ export const assignRoleCommand = {
 
     for (const member of members.values()) {
       if (member.roles.cache.has(role.id)) {
-        skipped++;
+        ++skipped;
         continue;
       }
 
       try {
         await member.roles.add(role, "Required by the assign_role command");
-        assigned++;
+        ++assigned;
       } catch {
-        skipped++;
+        ++skipped;
       }
     }
 

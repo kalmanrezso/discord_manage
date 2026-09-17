@@ -9,6 +9,6 @@ TODO:
 - [ ] send images from a folder many times
 - [x] backup all messages from server
 - [x] assign role to all users
-- [ ] remove all roles
+- [x] remove all roles
 - [ ] create random channels
 - [ ] react for any messages and not just slash commands, `client.on("messageCreate", ...);`
