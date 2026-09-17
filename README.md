@@ -3,8 +3,7 @@
 TODO:
 - [x] hello world
 - [x] populate server with test channels and messages (for testing)
-- [ ] remove all messages
-- [ ] remove all channels
+- [x] remove all channels
 - [x] send messages to all channels
 - [ ] send images from a folder to all channels
 - [x] backup all messages from server
