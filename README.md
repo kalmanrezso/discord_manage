@@ -7,7 +7,7 @@ TODO:
 - [ ] remove all channels
 - [ ] change all messages to a specific text
 - [ ] send images from a folder many times
-- [ ] export all messages from server
+- [x] backup all messages from server
 - [ ] mass assign role
 - [ ] remove all roles
 - [ ] create random channels
