@@ -2,7 +2,7 @@
 
 TODO:
 - [x] hello world
-- [ ] populate server with test channels and messages (for testing)
+- [x] populate server with test channels and messages (for testing)
 - [ ] remove all messages
 - [ ] remove all channels
 - [ ] change all messages to a specific text
