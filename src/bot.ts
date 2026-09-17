@@ -4,6 +4,8 @@ import {
   Collection,
   GatewayIntentBits,
   Interaction,
+  Message,
+  OmitPartialGroupDMChannel,
   type ChatInputCommandInteraction
 } from "discord.js";
 
@@ -23,7 +25,9 @@ import { sendRandomImagesCommand } from "./commands/send-images.js";
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMembers
+    GatewayIntentBits.GuildMembers, // for editing of roles
+    GatewayIntentBits.MessageContent, // read message text
+    GatewayIntentBits.GuildMessages, // subscribe to guild message events
   ]
 });
 
@@ -77,6 +81,20 @@ client.on("interactionCreate", async (interaction: Interaction<CacheType>) => {
     }
   }
 });
+
+client.on(
+  "messageCreate",
+  async (message: OmitPartialGroupDMChannel<Message<boolean>>) => {
+    // Prevent the bot from responding to itself or other bots
+    if (message.author.bot) {
+      return;
+    }
+
+    if (message.content === "hello") {
+      await message.reply("peek-a-boo");
+    }
+  }
+);
 
 export async function startBot() {
   await client.login(env.discordToken);

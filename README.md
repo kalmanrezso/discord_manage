@@ -11,4 +11,4 @@ TODO:
 - [x] assign role to all users
 - [x] remove all roles
 - [x] create random channels
-- [ ] react for any messages and not just slash commands, `client.on("messageCreate", ...);`
+- [x] react for any messages and not just slash commands, `client.on("messageCreate", ...);`
