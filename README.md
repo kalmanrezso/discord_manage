@@ -8,7 +8,7 @@ TODO:
 - [ ] change all messages to a specific text
 - [ ] send images from a folder many times
 - [x] backup all messages from server
-- [ ] mass assign role
+- [x] assign role to all users
 - [ ] remove all roles
 - [ ] create random channels
 - [ ] react for any messages and not just slash commands, `client.on("messageCreate", ...);`

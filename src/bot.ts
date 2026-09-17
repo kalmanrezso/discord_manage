@@ -12,9 +12,13 @@ import { env } from "./config/env.js";
 import { helloCommand } from "./commands/hello.js";
 import { seedCommand } from "./commands/seed.js";
 import { backupCommand } from "./commands/backup-messages.js";
+import { assignRoleCommand } from "./commands/assign-role.js";
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds]
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers
+  ]
 });
 
 const commands = new Collection<
@@ -29,6 +33,7 @@ const commands = new Collection<
 commands.set(helloCommand.name, helloCommand);
 commands.set(seedCommand.name, seedCommand);
 commands.set(backupCommand.name, backupCommand);
+commands.set(assignRoleCommand.name, assignRoleCommand);
 
 client.once("clientReady", (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);
