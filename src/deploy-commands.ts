@@ -10,6 +10,7 @@ import { seedCommand } from "./commands/seed.js";
 import { backupCommand } from "./commands/backup-messages.js";
 import { assignRoleCommand } from "./commands/assign-role.js";
 import { removeAllRolesCommand } from "./commands/remove-all-roles.js";
+import { sendMessagesCommand } from "./commands/send-messages.js";
 
 const rest = new REST({ version: "10" }).setToken(env.discordToken);
 
@@ -21,7 +22,8 @@ await rest.put(
       seedCommand,
       backupCommand,
       assignRoleCommand,
-      removeAllRolesCommand
+      removeAllRolesCommand,
+      sendMessagesCommand
     ]
   }
 );
