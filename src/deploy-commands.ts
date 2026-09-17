@@ -12,6 +12,7 @@ import { assignRoleCommand } from "./commands/assign-role.js";
 import { removeAllRolesCommand } from "./commands/remove-all-roles.js";
 import { sendMessagesCommand } from "./commands/send-messages.js";
 import { removeAllChannelsCommand } from "./commands/remove-all-channels.js";
+import { createRandomChannelsCommand } from "./commands/create-random-channels.js";
 
 const rest = new REST({ version: "10" }).setToken(env.discordToken);
 
@@ -25,7 +26,8 @@ await rest.put(
       assignRoleCommand,
       removeAllRolesCommand,
       sendMessagesCommand,
-      removeAllChannelsCommand
+      removeAllChannelsCommand,
+      createRandomChannelsCommand
     ]
   }
 );

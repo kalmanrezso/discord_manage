@@ -16,6 +16,7 @@ import { assignRoleCommand } from "./commands/assign-role.js";
 import { removeAllRolesCommand } from "./commands/remove-all-roles.js";
 import { sendMessagesCommand } from "./commands/send-messages.js";
 import { removeAllChannelsCommand } from "./commands/remove-all-channels.js";
+import { createRandomChannelsCommand } from "./commands/create-random-channels.js";
 
 const client = new Client({
   intents: [
@@ -40,6 +41,7 @@ commands.set(assignRoleCommand.name, assignRoleCommand);
 commands.set(removeAllRolesCommand.name, removeAllRolesCommand);
 commands.set(sendMessagesCommand.name, sendMessagesCommand);
 commands.set(removeAllChannelsCommand.name, removeAllChannelsCommand);
+commands.set(createRandomChannelsCommand.name, createRandomChannelsCommand);
 
 client.once("clientReady", (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);

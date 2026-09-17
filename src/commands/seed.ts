@@ -48,14 +48,6 @@ export const seedCommand = {
       return;
     }
 
-    if (!interaction.memberPermissions?.has(PermissionFlagsBits.ManageChannels)) {
-      await interaction.reply({
-        content: "You need the Manage Channels permission to use this command.",
-        ephemeral: true,
-      });
-      return;
-    }
-
     await interaction.deferReply({ ephemeral: true });
 
     try {

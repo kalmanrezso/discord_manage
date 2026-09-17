@@ -9,5 +9,5 @@ TODO:
 - [x] backup all messages from server
 - [x] assign role to all users
 - [x] remove all roles
-- [ ] create random channels
+- [x] create random channels
 - [ ] react for any messages and not just slash commands, `client.on("messageCreate", ...);`
