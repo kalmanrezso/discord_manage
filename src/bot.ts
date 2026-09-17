@@ -1,7 +1,9 @@
 import {
+  CacheType,
   Client,
   Collection,
   GatewayIntentBits,
+  Interaction,
   type ChatInputCommandInteraction
 } from "discord.js";
 
@@ -23,11 +25,11 @@ const commands = new Collection<
 
 commands.set(helloCommand.name, helloCommand);
 
-client.once("ready", (readyClient) => {
+client.once("clientReady", (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);
 });
 
-client.on("interactionCreate", async (interaction) => {
+client.on("interactionCreate", async (interaction: Interaction<CacheType>) => {
   if (!interaction.isChatInputCommand()) {
     return;
   }
