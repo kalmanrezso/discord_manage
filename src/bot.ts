@@ -11,6 +11,7 @@ import { env } from "./config/env.js";
 
 import { helloCommand } from "./commands/hello.js";
 import { seedCommand } from "./commands/seed.js";
+import { backupCommand } from "./commands/backup-messages.js";
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
@@ -27,6 +28,7 @@ const commands = new Collection<
 
 commands.set(helloCommand.name, helloCommand);
 commands.set(seedCommand.name, seedCommand);
+commands.set(backupCommand.name, backupCommand);
 
 client.once("clientReady", (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);

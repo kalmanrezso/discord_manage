@@ -7,13 +7,14 @@ import { env } from "./config/env.js";
 
 import { helloCommand } from "./commands/hello.js";
 import { seedCommand } from "./commands/seed.js";
+import { backupCommand } from "./commands/backup-messages.js";
 
 const rest = new REST({ version: "10" }).setToken(env.discordToken);
 
 await rest.put(
   Routes.applicationCommands(env.discordClientId),
   {
-    body: [helloCommand, seedCommand]
+    body: [helloCommand, seedCommand, backupCommand]
   }
 );
 
