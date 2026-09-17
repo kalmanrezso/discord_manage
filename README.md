@@ -5,8 +5,8 @@ TODO:
 - [x] populate server with test channels and messages (for testing)
 - [ ] remove all messages
 - [ ] remove all channels
-- [ ] change all messages to a specific text
-- [ ] send images from a folder many times
+- [ ] send messages with a specific name
+- [ ] send images from a folder
 - [x] backup all messages from server
 - [x] assign role to all users
 - [x] remove all roles
