@@ -6,7 +6,7 @@ TODO:
 - [x] remove all channels
 - [x] send messages to all channels
 - [x] send a random image
-- [ ] send images from a folder to all channels
+- [x] send images from a folder to all channels
 - [x] backup all messages from server
 - [x] assign role to all users
 - [x] remove all roles

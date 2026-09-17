@@ -14,6 +14,7 @@ import { sendMessagesCommand } from "./commands/send-messages.js";
 import { removeAllChannelsCommand } from "./commands/remove-all-channels.js";
 import { createRandomChannelsCommand } from "./commands/create-random-channels.js";
 import { randomImageCommand } from "./commands/random-image.js";
+import { sendRandomImagesCommand } from "./commands/send-images.js";
 
 const rest = new REST({ version: "10" }).setToken(env.discordToken);
 
@@ -29,7 +30,8 @@ await rest.put(
       sendMessagesCommand,
       removeAllChannelsCommand,
       createRandomChannelsCommand,
-      randomImageCommand
+      randomImageCommand,
+      sendRandomImagesCommand
     ]
   }
 );
